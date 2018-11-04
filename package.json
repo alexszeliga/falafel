@@ -1,0 +1,24 @@
+{
+  "name": "falafel",
+  "version": "1.0.0",
+  "description": "A full stack web app that is, for some reason, about falafel.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexszeliga/falafel.git"
+  },
+  "author": "Alex Szeliga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexszeliga/falafel/issues"
+  },
+  "homepage": "https://github.com/alexszeliga/falafel#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
