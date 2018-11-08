@@ -5,17 +5,21 @@ $(document).ready(() => {
     e.preventDefault();
     var id = e.currentTarget.dataset.id;
     var devouredStatus = e.currentTarget.dataset.devoured;
-    $.ajax({
-      url: `/api/falafel/${id}`,
-      data: { id: id, devoured: devouredStatus },
+    $.ajax(`/api/falafel/${id}`, {
       type: "PUT",
-      dataType: "json"
-    }).then(response => {
-      console.log(response);
+      data: { id: id, devoured: devouredStatus }
+    }).then(() => {
+      location.reload();
     });
   });
   $(".submit-button").on("click", e => {
     e.preventDefault();
+    var falafel = $("#falafel")
+      .val()
+      .trim();
     console.log("add falafel");
+    $.post("/api/falafel", { falafel: falafel }, response => {
+      location.reload();
+    });
   });
 });

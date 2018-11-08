@@ -22,13 +22,9 @@ router.post("/api/falafel", (req, res) => {
   // I can't use object destructuring here, which results in less
   // semantic code and bad habits. Good thing I'm paying attention.
   // https://tinyurl.com/y8uemrnv
-  falafel.create(
-    ["falafel_name", "devoured"],
-    [req.body.falafel, req.body.devoured],
-    response => {
-      res.json({ id: result.insertId });
-    }
-  );
+  falafel.create(["falafel_name"], [req.body.falafel], response => {
+    res.json({ id: response.insertId });
+  });
 });
 
 router.put("/api/falafel/:id", (req, res) => {
