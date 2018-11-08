@@ -11,8 +11,10 @@ var falafel = {
       cb(res);
     });
   },
-  update: function(objColVals, devoured, cb) {
-    orm.updateOne("falafel", objColVals, devoured, function(res) {
+  // updated from copy/pasta: there was an argument before the cb for devoured.
+  // if you're having issues updating that, consider looking here
+  update: function(objColVals, condition, cb) {
+    orm.updateOne("falafel", objColVals, condition, function(res) {
       cb(res);
     });
   }

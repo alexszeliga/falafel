@@ -4,8 +4,8 @@
 
 <ul>
     {{#each falafel}}
-    {{#unless eaten}}
-    {{> falafel/menu-item eat=true}}
+    {{#unless devoured}}
+    {{> falafel/menu-item devoured=true}}
     {{/unless}}
     {{/each}}
 </ul>
@@ -13,8 +13,8 @@
 <h2>Falafel you've eaten</h2>
 <ul>
     {{#each falafel}}
-    {{#if eaten}}
-    {{> falafel/menu-item eat=false}}
+    {{#if devoured}}
+    {{> falafel/menu-item devoured=false}}
     {{/if}}
     {{/each}}
 </ul>
@@ -25,8 +25,8 @@
 
     <div class="form-group">
         <label for="falafel">Falafel Type:</label>
-        <input type="text" id="falafel" name="name">
+        <input type="text" id="falafel" name="falafel">
     </div>
 
-    <button type="submit">Add Cat</button>
+    <button class="submit-button" type="submit">Add Falafel</button>
 </form>
