@@ -1,7 +1,8 @@
-<li>
-    {{falafel_name}}
+<div class="falafel-tile {{#if devoured}}active-tile{{else}}inactive-tile{{/if}}">
+    <div class="tile-title">{{falafel_name}}</div>
 
     <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-        {{#if devoured}}Eat me{{else}}Make fresh{{/if}}
+        {{#if devoured}}Deactivate{{else}}Activate{{/if}}
     </button>
-</li>
+    {{#if devoured}}{{else}}<button class="delete-item" data-id="{{id}}">Delete Item</button>{{/if}}
+</div>

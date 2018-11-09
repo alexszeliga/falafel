@@ -17,6 +17,11 @@ var falafel = {
     orm.updateOne("falafel", objColVals, condition, function(res) {
       cb(res);
     });
+  },
+  delete: function(condition, cb) {
+    orm.deleteOne("falafel", condition, function(res) {
+      cb(res);
+    });
   }
 };
 

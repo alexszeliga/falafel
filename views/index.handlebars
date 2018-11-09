@@ -1,32 +1,47 @@
-<h1>Falafel</h1>
+<div class="header">
+    <h1>Falafel Menu ESBC</h1>
+</div>
+<div class="header-container">
+    <h2 class="panel-title">Active menu items</h2>
+    <h2 class="panel-title">Inactive Menu Items</h2>
+</div>
+<div class="menu-container">
 
-<h2>Falafel on the menu</h2>
 
-<ul>
-    {{#each falafel}}
-    {{#unless devoured}}
-    {{> falafel/menu-item devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
+    <div class="menu-panel">
 
-<h2>Falafel you've eaten</h2>
-<ul>
-    {{#each falafel}}
-    {{#if devoured}}
-    {{> falafel/menu-item devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
 
-<h2>Add a Falafel</h2>
-{{!-- TODO: Falafel Form --}}
-<form class="create-form">
 
-    <div class="form-group">
-        <label for="falafel">Falafel Type:</label>
-        <input type="text" id="falafel" name="falafel">
+        {{#each falafel}}
+        {{#unless devoured}}
+        {{> falafel/menu-item devoured=true}}
+        {{/unless}}
+        {{/each}}
+
     </div>
 
-    <button class="submit-button" type="submit">Add Falafel</button>
-</form>
+    <div class="menu-panel">
+
+
+        {{#each falafel}}
+        {{#if devoured}}
+        {{> falafel/menu-item devoured=false}}
+        {{/if}}
+        {{/each}}
+
+    </div>
+</div>
+
+<div class="add-item-container">
+    <h2>Add a Falafel</h2>
+    {{!-- TODO: Falafel Form --}}
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="falafel">Falafel Type:</label>
+            <input type="text" id="falafel" name="falafel">
+        </div>
+
+        <button class="submit-button" type="submit">Add Falafel</button>
+    </form>
+</div>

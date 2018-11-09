@@ -1,0 +1,86 @@
+body {
+  margin: 1em;
+}
+
+.header {
+  text-align: center;
+  margin: 1em;
+}
+
+.header h1 {
+  font-size: 3em;
+}
+
+.menu-container {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+}
+
+.header-container {
+  display: flex;
+  padding: 0 1em;
+  justify-content: space-around;
+}
+
+.menu-panel {
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid black;
+  border-radius: 10%;
+  flex: 0 0 calc(50vw-2em);
+}
+
+.panel-title {
+  display: inline-block;
+  font-size: 2em;
+}
+
+.add-item-container {
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: 10%;
+  width: 40vw;
+  margin: auto;
+  overflow: auto;
+}
+
+.falafel-tile {
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 2px dotted black;
+  border-radius: 10%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.tile-title {
+  min-height: 3em;
+  max-height: 3em;
+}
+
+.add-item-container h2 {
+  display: block;
+  text-align: center;
+  font-size: 2em;
+}
+
+.form-group label {
+  display: block;
+  margin: 1em 0em;
+  text-align: left;
+}
+
+.submit-button {
+  float: right;
+  width: 25%;
+}
+
+.form-group input {
+  float: left;
+  width: 60%;
+}
