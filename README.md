@@ -13,7 +13,7 @@ It includes a hand-coded object relational mapper that allows the one model, the
 
 # How to Use it:
 
-Upon opening the app, deployed on Heroku (here)[https://boiling-ridge-62389.herokuapp.com/], the menu is populated from a MySQL database table.
+Upon opening the app, deployed on Heroku [here](https://boiling-ridge-62389.herokuapp.com/), the menu is populated from a MySQL database table.
 
 Active menu items populate on the left, inactive on the right. Active menu items can be deactivated. Deactivated menu items can be reactivated or deleted.
 
